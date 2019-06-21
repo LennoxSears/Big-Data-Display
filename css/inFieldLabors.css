@@ -1,0 +1,75 @@
+.inFieldLabors-card .logContainer {
+ height:700px;
+ padding:0px 20px;
+}
+
+.inFieldLabors-card .logContainer h4 {
+  color:rgba(108, 180, 219, 1);
+  margin-top:40px;
+  margin-bottom: 10px;
+}
+
+.inFieldLabors-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.inFieldLabors-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.inFieldLabors-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.inFieldLabors-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.inFieldLabors-card .clearfix:before,
+.inFieldLabors-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.inFieldLabors-card .clearfix:after {
+      clear: both
+  }
+
+.inFieldLabors-card .logNum {
+  color:white;
+  padding-top:18px;
+  padding-right:18px;
+  margin-bottom:20px;
+  text-align: right;
+}
+
+.inFieldLabors-card .logCard {
+  box-sizing: border-box;
+}
+
+.inFieldLabors-card .el-card {
+  background:none;
+  border:0px;
+}
+
+.inFieldLabors-card .nameSpan {
+  color:#249CF9;
+}
+
+.inFieldLabors-card .recorderSpan {
+  color:white;
+}
+
+.inFieldLabors-card .logCard *{
+  background:none;
+  color:white;
+}
+
+.inFieldLabors-card .logCard .el-table__header-wrapper {
+  display: none;
+}

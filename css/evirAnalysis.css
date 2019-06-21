@@ -1,0 +1,14 @@
+.evirAnalysis-card .bigContainer{
+  height:1100px;
+}
+
+.evirAnalysis-card .chartContainer {
+  margin-left: 40px;
+  height:auto;
+  width:auto;
+}
+
+.evirAnalysis-card h4
+ {
+   color:#67ADD5
+ }

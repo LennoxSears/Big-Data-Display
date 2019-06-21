@@ -1,0 +1,71 @@
+.newAlert-card .logContainer {
+ height:745px;
+}
+
+.newAlert-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.newAlert-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.newAlert-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.newAlert-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.newAlert-card .clearfix:before,
+.newAlert-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.newAlert-card .clearfix:after {
+      clear: both
+  }
+
+.newAlert-card .logNum {
+  color:white;
+  padding-top:18px;
+  padding-right:18px;
+  margin-bottom:20px;
+  text-align: right;
+}
+
+.newAlert-card .logCard {
+  width:100%;
+}
+
+.newAlert-card .el-card {
+  background:none;
+  border:2px rgba(28, 68, 169, 1) solid;
+  width:80%;
+  margin:20px auto;
+}
+
+.newAlert-card .codeSpan {
+  color:white;
+}
+
+.newAlert-card .typeSpan{
+  color:rgba(255, 64, 63, 1);
+}
+
+.newAlert-card .valueSpan{
+  color:rgba(255, 64, 63, 1);
+  margin-left: 20px;
+}
+
+.newAlert-card .exceedSpan{
+  color:rgba(255, 64, 63, 1);
+  float: right;
+}

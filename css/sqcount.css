@@ -1,0 +1,91 @@
+.sqcount-div{
+  position: relative;
+  font-size: 12px;
+}
+.sqcount-div .color1{
+  color:#fff;
+}
+.sqcount-div .color2{
+  color: #6CB3DB;
+}
+.sqcount-div .bgcolor3{
+  background-color: #35BA87;
+}
+.sqcount-div .bgcolor4{
+  background-color: #5A99BF;
+}
+.sqcount-div .bgcolor5{
+  background-color: #D3B155;
+}
+.sqcount-div .bgcolor6{
+  background-color: #FC3434;
+}
+.sqcount-div .data-text{
+  font-size: 22px;
+  color: #6CB3DB;
+}
+.check{
+  margin-top:-90px;
+}
+.company{
+  margin: 0 20px;
+}
+.company-hd{
+  margin-bottom: 30px;
+}
+.company-hd .hd-text{
+  font-size: 16px;
+}
+.company-hd .square{
+  display: inline-block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+.company-bd .item-hd{
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.company-bd .item-content{
+  overflow: hidden;
+  border:  0px red solid;
+}
+.company-bd .item-content .process-line{
+  height: 8px;
+  border-radius: 5px;
+  float: left;
+}
+.item-content .line1{
+  background-color: #35BA87;
+
+}
+.item-content .line2{
+  background-color: #5A99BF;
+}
+.item-content .line3{
+  background-color: #D3B155;
+}
+.item-content .line4{
+  background-color: #FC3434;
+}
+
+.sqcount-div .sq-btn-div{
+  position: relative;
+  top: 14px;
+  border:0px solid red;
+}
+
+.miniBtn {
+  margin: 0 auto;
+}
+
+.echarts {
+  border: 0px red solid;
+  width: 380px;
+  height:260px;
+  margin:0 auto;
+  margin-top:20px;
+}

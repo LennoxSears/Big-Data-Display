@@ -1,0 +1,56 @@
+.personContent p{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #EFEFF0;
+}
+.personContent p span{
+	display: inline-block;
+	padding: 0 4%;
+	font-size: 36px;
+	color: #6AB0D7;
+}
+.teamList{
+	padding: 0 25px;
+	margin-left: 0;
+	height: 220px;
+	margin: 20px 0;
+}
+.teamList::-webkit-scrollbar {
+  display: none;
+}
+.teamList ul {
+	width: 100%;
+	height: 100%;
+	padding-left: 0;
+	margin-top: 0;
+}
+.teamList ul li{
+	margin-left: 0;
+	height: 28px;
+	line-height: 28px;
+	width: 100%;
+	list-style: none;
+	float: left;
+	display: inline-block;
+}
+.teamList ul li:nth-child(even){
+	background: #2C5272;
+}
+.teamList ul li span{
+	padding:0 15px;
+	color: #fff;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	display: inline-block;
+	float: left;
+}
+.teamList ul li span:nth-child(2){
+	float: right;
+}
+
+#personTeam {
+	border:0px blue solid;
+	margin:0 auto;
+}

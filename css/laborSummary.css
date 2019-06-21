@@ -1,0 +1,36 @@
+.laborSummary-card .el-card {
+  background:none;
+  border:0px red solid;
+  color:white;
+  margin:0px auto;
+}
+
+.laborSummary-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border:0px red solid;
+}
+
+.laborSummary-card .lsTitle {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.laborSummary-card .lsNum {
+  float: right;
+  margin-right: 20px;
+  font-size: 24px;
+  color:#59BAF2;
+  position:relative;
+  top:-4px;
+}
+
+.laborSummary-card .lsCard {
+  background-image: url('../assets/laborStatBg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width:75%;
+  margin:0px auto;
+}

@@ -1,0 +1,132 @@
+.materialStock-card .logContainer {
+ height:700px;
+}
+
+.materialStock-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.materialStock-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.materialStock-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.materialStock-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.materialStock-card .clearfix:before,
+.materialStock-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.materialStock-card .clearfix:after {
+      clear: both
+  }
+
+.materialStock-card .logNum {
+  color:white;
+  padding-top:18px;
+  padding-right:18px;
+  margin-bottom:20px;
+  text-align: right;
+}
+
+.materialStock-card .logCard {
+  width:100%;
+}
+
+.materialStock-card .el-card {
+  background:none;
+  border:0px;
+}
+
+.materialStock-card .nameSpan {
+  color:#249CF9;
+}
+
+.materialStock-card .recorderSpan {
+  color:white;
+}
+
+.materialStock-card .logCard:nth-child(2n) {
+  background-color: rgba(64, 158, 255, 0.1);
+}
+
+.materialStock-card .logCard:nth-child(2n+1) {
+
+}
+
+.materialStock-card .stockItem {
+  display: inline-block;
+  width:120px;
+  height:60px;
+  border:0px red solid;
+  position: relative;
+  color:white;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  position: relative;
+}
+
+.materialStock-card .logCard {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border:0px blue solid;
+  padding: 10px 40px;
+}
+
+.materialStock-card .iconDiv {
+  font-size: 12px;
+  position:relative;
+  border:0px blue solid;
+}
+
+.materialStock-card .itemIcon {
+  position: relative;
+  top:12px;
+  left:-30px;
+  width:30px;
+  height:30px;
+}
+
+.materialStock-card .codeText {
+  font-size: 10px;
+  position: absolute;
+  top:6px;
+  right:0px;
+  text-align: right;
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 60px;
+}
+
+.materialStock-card .codeText2 {
+  font-size: 14px;
+  position: absolute;
+  top:6px;
+  right:0px;
+}
+
+.materialStock-card .stockText {
+  font-size: 16px;
+  position: absolute;
+  top:24px;
+  right:0px;
+}

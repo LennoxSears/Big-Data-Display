@@ -1,0 +1,23 @@
+
+.environment-card .data-text{
+  font-size: 22px;
+  margin-right: 8px;
+  margin-left: 8px;
+  color: #6CB3DB;
+}
+.environment-card .unit{
+  font-size: 12px;
+  color: #6CB3DB;
+}
+.environment-card .color1{
+  color: #fff;
+}
+.echarts-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.color1 img {
+  width:22px;
+  height:22px;
+  margin-right: 6px;
+}

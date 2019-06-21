@@ -1,0 +1,13 @@
+.projectText {
+    font-size: 14px;
+    color:white;
+  }
+
+.projectItem {
+    padding: 4px 0;
+  }
+
+.project-card {
+  background: none;
+  border:0px;
+}

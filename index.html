@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BI展板</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/polyfill.min.js"></script>
+    <link href="css/video-js.css" rel="stylesheet">
+</head>
+<body>
+    <video autoplay loop id="video-background" muted plays-inline>
+      <source src="../assets/VBck.mp4" type="video/mp4">
+    </video>
+    <!-- import video player -->
+    <script src="js/video.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-flash@2.1.2/dist/videojs-flash.min.js"></script>
+    <script src="js/videoStreaming.js"></script>
+    <div id="app" style="width: 100%;">
+        <!--<pre>{{ $data | json }}</pre>-->
+        <div>
+            <div class="layoutJSON">
+                Displayed as <code>[x, y, w, h]</code>:
+                <div class="columns">
+                    <div class="layoutItem" v-for="item in layoutOption.layout">
+                        <b>{{item.i}}</b>: {{item}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--<button @click="decreaseWidth">Decrease Width</button>
+            <button @click="increaseWidth">Increase Width</button>
+            <button @click="addItem">Add an item</button>-->
+            <div class = "v-layout">
+              <div class="vue-grid-item menu-grid-item">
+                <!--footer------------------------------------------------------>
+                <div class="footer">
+                  <img src="assets/icon_companyName.png" width="30" height="auto"></img><span class="companyName">{{project.companyName}}</span>
+                  <div id="clockDisplay" class="clock"></div>
+                </div>
+
+                <el-row :gutter="0">
+                  <el-col :span="8"><div class="menuDiv menuLeft" style="padding-right:60px">
+                    <el-row type="flex" class="row-bg" justify="space-between">
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.projectSummary">
+                          <img src="assets/icons/menu/icon-projectSummary.png" class="menuIcon" data-menuName="projectSummary" @click="menuProcess"></img>
+                          <div data-menuName="projectSummary" @click="menuProcess">项目概况</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="projectSummary" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-projectSummary-blue.png" class="menuIcon"></img>
+                          <div>项目概况</div>
+                        </div>
+                    </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.videoSurveillance">
+                          <img src="assets/icons/menu/icon-videoSurveillance.png" class="menuIcon" data-menuName="videoSurveillance" @click="menuProcess"></img>
+                          <div data-menuName="videoSurveillance" @click="menuProcess">视频监控</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="videoSurveillance" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-videoSurveillance-blue.png" class="menuIcon"></img>
+                          <div>视频监控</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.qualityManagement">
+                          <img src="assets/icons/menu/icon-qualityManagement.png" class="menuIcon" data-menuName="qualityManagement" @click="menuProcess"></img>
+                          <div data-menuName="qualityManagement" @click="menuProcess">质量管理</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="qualityManagement" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-qualityManagement-blue.png" class="menuIcon"></img>
+                          <div>质量管理</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.securityManagement">
+                          <img src="assets/icons/menu/icon-securityManagement.png" class="menuIcon" data-menuName="securityManagement" @click="menuProcess"></img>
+                          <div data-menuName="securityManagement" @click="menuProcess">安全管理</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="securityManagement" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-securityManagement-blue.png" class="menuIcon"></img>
+                          <div>安全管理</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.progressManagement">
+                          <img src="assets/icons/menu/icon-progressManagement.png" class="menuIcon" data-menuName="progressManagement" @click="menuProcess"></img>
+                          <div data-menuName="progressManagement" @click="menuProcess">进度管理</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="progressManagement" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-progressManagement-blue.png" class="menuIcon"></img>
+                          <div>进度管理</div>
+                        </div>
+                      </el-col>
+                    </el-row>
+                  </div></el-col>
+                  <el-col :span="8"><div class="menuDiv menuMid">
+                    <div v-if="!editing" class="editBtn">
+                      <el-button @click="intoLayoutSetting" type="text" icon="el-icon-edit" style="color:white">编辑布局</el-button>
+                    </div>
+                    <div v-if="editing" class="editBtn">
+                      <el-button @click="addLayoutPanel" type="text" icon="el-icon-plus" style="color:white">添加面板</el-button>
+                      <el-button @click="restoreDefaultLayoutSetting" type="text" icon="el-icon-refresh" style="color:white">还原默认</el-button>
+                      <el-button @click="saveLayoutSetting" type="text" icon="el-icon-check" style="color:white">保存</el-button>
+                      <el-button @click="cancelLayoutSetting" type="text" icon="el-icon-close" style="color:white">取消</el-button>
+                    </div>
+                    <h1>{{project.name}}</h1>
+                  </div></el-col>
+                  <el-col :span="8"><div class="menuDiv menuRight" style="padding-left:60px">
+                    <el-row type="flex" class="row-bg" justify="space-between">
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.bim">
+                          <img src="assets/icons/menu/icon-bim.png" class="menuIcon" data-menuName="bim" @click="menuProcess"></img>
+                          <div data-menuName="bim" @click="menuProcess">BIM</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="bim" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-bim-blue.png" class="menuIcon"></img>
+                          <div>BIM</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.materialManagement">
+                          <img src="assets/icons/menu/icon-materialManagement.png" class="menuIcon" data-menuName="materialManagement" @click="menuProcess"></img>
+                          <div data-menuName="materialManagement" @click="menuProcess">材料管理</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="materialManagement" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-materialManagement-blue.png" class="menuIcon"></img>
+                          <div>材料管理</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.labors">
+                          <img src="assets/icons/menu/icon-labors.png" class="menuIcon" data-menuName="labors" @click="menuProcess"></img>
+                          <div data-menuName="labors" @click="menuProcess">劳务人员</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="labors" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-labors-blue.png" class="menuIcon"></img>
+                          <div>劳务人员</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.greenConstruction">
+                          <img src="assets/icons/menu/icon-greenConstruction.png" class="menuIcon" data-menuName="greenConstruction" @click="menuProcess"></img>
+                          <div data-menuName="greenConstruction" @click="menuProcess">绿色施工</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="greenConstruction" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-greenConstruction-blue.png" class="menuIcon"></img>
+                          <div>绿色施工</div>
+                        </div>
+                      </el-col>
+                      <el-col :span="4">
+                        <div class="menuDiv menuItem" v-if="menu.intelligentDevice">
+                          <img src="assets/icons/menu/icon-intelligentDevice.png" class="menuIcon" data-menuName="intelligentDevice" @click="menuProcess"></img>
+                          <div data-menuName="intelligentDevice" @click="menuProcess">智能设备</div>
+                        </div>
+                        <div class="menuDiv menuItem" data-panel="intelligentDevice" style="color:#409eff">
+                          <img src="assets/icons/menu/icon-intelligentDevice.png" class="menuIcon"></img>
+                          <div>智能设备</div>
+                        </div>
+                      </el-col>
+                    </el-row>
+                  </div></el-col>
+                </el-row>
+              </div>
+
+            <grid-layout :layout.sync="layoutOption.layout"
+                         :is-draggable="layoutOption.is_draggable"
+                         :is-resizable="layoutOption.is_resizable"
+                         :responsive="layoutOption.responsive"
+                         :row-height="150"
+            >
+                <grid-item :key="index" v-for="(item, index) in layoutOption.layout"
+                           :x="item.x"
+                           :y="item.y"
+                           :w="item.w"
+                           :h="item.h"
+                           :i="item.i"
+                        >
+                    <div v-if="editing" class="editingDiv">
+                      <img @click='layoutOption.layout.splice(index, 1);' class="gridItemClose" src="assets/icon_close.png"></img>
+                      <!--
+                      <img class="gridItemScale" src="assets/icon_resize.png"></img>
+                      -->
+                    </div>
+                    <div class="templateWrapper">
+                      <component v-bind:is="item.t" v-bind:para="item.p"></component>
+                    </div>
+                    <div v-if="item.n[item.n.length - 1] == '@'" class="componentFailed">
+                      <img src="assets/icons/icon-inProgress.png"></img>
+                      <p>{{item.n.substring(0, item.n.length - 1)}}开发中...</p>
+                    </div>
+                </grid-item>
+            </grid-layout>
+          </div>
+        </div>
+
+        <!--PanelPop--------------------------------------------------------------->
+        <div class="overlay" id="panelPop">
+          <div class="popup" style="width:320px;height:50px;">
+            <img onclick="document.getElementById('panelPop').style.display = 'none'" class="gridItemClose" src="assets/icon_close.png"></img>
+            <div class="addPanelDiv">
+              <el-dropdown @command="panelCommand">
+                  <span class="el-dropdown-link">
+                    {{chosenPanel}}<i class="el-icon-arrow-down el-icon--right"></i>
+                  </span>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item v-for="item in allPanels" :key="item" :command="item">{{item.n}}</el-dropdown-item>
+                  </el-dropdown-menu>
+              </el-dropdown>
+              <el-button @click="addGridItem" type="text">添加</el-button>
+            </div>
+          </div>
+        </div>
+
+        <!--VideoPop---------------------------------------------------------------->
+        <div class="overlay" id="videoPop">
+          <div class="popup">
+            <img onclick="document.getElementById('videoPop').style.display='none'" class="gridItemClose" src="assets/icon_close.png"></img>
+            <video-js id="popVideo" class="vjs-default-skin" controls preload="auto" width="720" height="480">
+            <source src="https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8" type="application/x-mpegURL">
+            </video-js>
+          </div>
+        </div>
+        <script id="popScript">
+          var player = videojs('popVideo');
+        </script>
+
+    </div>
+
+
+
+    <script src="js/axios.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-grid-layout.umd.min.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/isEmpty.min.js"></script>
+    <!-- import Element CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- import Element JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="js/components/weather.js"></script>
+    <script src="js/components/personStat.js"></script>
+    <script src="js/components/processStat.js"></script>
+    <link rel="stylesheet" href="css/processStat.css">
+    <script src="js/components/Environment.js"></script>
+    <script src="js/components/SQCount.js"></script>
+    <script src="js/components/Milestone.js"></script>
+    <script src="js/components/MaterialStat.js"></script>
+    <script src="js/components/securityLog.js"></script>
+    <script src="js/components/securityEdu.js"></script>
+    <script src="js/components/videoSpot.js"></script>
+    <script src="js/components/purchaseStat.js"></script>
+    <script src="js/components/purchaseExp.js"></script>
+    <script src="js/components/laborMap.js"></script>
+    <script src="js/components/laborSummary.js"></script>
+    <script src="js/components/laborInOut.js"></script>
+    <script src="js/components/evirAnalysis.js"></script>
+    <link rel="stylesheet" href="css/milestone.css">
+
+    <script src="js/responsive.js"></script>
+    <!-- import mapAPI -->
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=511c9b91156e4be52e667ada807e7d20"></script>
+    <!-- import alert CSS -->
+    <link rel="stylesheet" href="css/alert.css">
+
+
+    <!--Components-------------------------------------------------------------------->
+    <script src="js/components/summaryMap.js"></script>
+    <script src="js/components/projectStat.js"></script>
+    <script src="js/components/deviceMap.js"></script>
+    <script src="js/components/tower.js"></script>
+    <script src="js/components/elevator.js"></script>
+    <script src="js/components/deviceMonitor.js"></script>
+    <script src="js/components/qualityPhoto.js"></script>
+    <script src="js/components/qualityLog.js"></script>
+    <script src="js/components/accidentReasonStat.js"></script>
+    <script src="js/components/securityPhoto.js"></script>
+    <script src="js/components/materialStock.js"></script>
+    <script src="js/components/laborChange.js"></script>
+    <script src="js/components/inFieldLabors.js"></script>
+    <script src="js/components/newAlert.js"></script>
+    <script src="js/components/bim.js"></script>
+    <script src="js/components/SCount.js"></script>
+    <script src="js/components/QCount.js"></script>
+    <script src="js/components/processDemo.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="js/autoScroll.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</body>
+</html>

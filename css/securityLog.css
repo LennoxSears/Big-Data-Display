@@ -1,0 +1,67 @@
+.securityLog-card .logContainer {
+ height:520px;
+}
+
+.securityLog-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.securityLog-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.securityLog-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.securityLog-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.securityLog-card .clearfix:before,
+.securityLog-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.securityLog-card .clearfix:after {
+      clear: both
+  }
+
+.securityLog-card .logNum {
+  color:white;
+  padding-top:18px;
+  padding-right:18px;
+  margin-bottom:20px;
+  text-align: right;
+}
+
+.securityLog-card .logCard {
+  width:100%;
+}
+
+.securityLog-card .el-card {
+  background:none;
+  border:0px;
+}
+
+.securityLog-card .nameSpan {
+  color:#249CF9;
+}
+
+.securityLog-card .recorderSpan {
+  color:white;
+}
+
+.securityLog-card .logCard:nth-child(2n+1) {
+  background-color: rgba(64, 158, 255, 0.1);
+}
+
+.securityLog-card .logCard:nth-child(2n) {
+
+}

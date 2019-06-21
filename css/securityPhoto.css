@@ -1,0 +1,80 @@
+.sPhoto-card .el-carousel__item h3 {
+   color: #475669;
+   font-size: 18px;
+   opacity: 0.75;
+   line-height: 300px;
+   margin: 0;
+ }
+
+ .sPhoto-card .el-carousel__item:nth-child(2n) {
+   background-color: #99a9bf;
+ }
+
+ .sPhoto-card .el-carousel__item:nth-child(2n+1) {
+   background-color: #d3dce6;
+ }
+
+ .sPhoto-card .carouselImg {
+   width:100%;
+   height:100%;
+ }
+
+
+.sPhoto-card ::-webkit-scrollbar{width:2px;height:2px;}
+.sPhoto-card ::-webkit-scrollbar-button{width:2px;height:2px;}
+
+.sPhoto-card div{
+  box-sizing:border-box;
+}
+
+.sPhoto-card .horizontal-scroll-wrapper{
+  box-sizing:border-box;
+  display:block;
+  width:140px;
+  height:937px;
+  background:none;
+  overflow-y:auto;
+  overflow-x:hidden;
+  border:0px solid red;
+  transform:rotate(-90deg) translateY(-140px);
+  transform-origin:right top;
+
+}
+.sPhoto-card .horizontal-scroll-wrapper > div{
+  display:block;
+  background:none;
+  border:0px blue solid;
+}
+
+.sPhoto-card .squares{
+}
+
+.sPhoto-card .squares > div{
+  width:100px;
+  height:100px;
+  margin:20px 20px;
+  border:0px blue solid;
+}
+
+.sPhoto-card .dropDownDiv {
+  height:40px;
+  color:white;
+  padding-top: 6px;
+  padding-left: 30px;
+  border:0px red solid;
+  position: absolute;
+  z-index: 200;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.sPhoto-card .el-dropdown-link {
+   cursor: pointer;
+   color: white;
+ }
+ .sPhoto-card .el-icon-arrow-down {
+   font-size: 12px;
+ }
+
+ .sPhoto-card .dropDownDiv .dropText{
+   margin-right: 20px;
+ }

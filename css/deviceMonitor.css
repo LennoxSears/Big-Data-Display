@@ -1,0 +1,33 @@
+.dmTitle {
+  text-align: center;
+}
+
+.dmFunctionNum {
+  text-align: center;
+  position: relative;
+}
+
+.dmErrorNum {
+  text-align: center;
+  position: relative;
+}
+
+#functionIcon {
+  height:80px;
+  width:auto;
+}
+
+#errorIcon {
+  height:80px;
+  width:auto;
+}
+
+.numTitle {
+  color:#409EFF;
+  font-size:18px;
+}
+
+.numSign {
+  color:#409EFF;
+  font-size:46px;
+}

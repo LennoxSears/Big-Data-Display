@@ -1,0 +1,67 @@
+.qualityLog-card .logContainer {
+ height:700px;
+}
+
+.qualityLog-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.qualityLog-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.qualityLog-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.qualityLog-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.qualityLog-card .clearfix:before,
+.qualityLog-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.qualityLog-card .clearfix:after {
+      clear: both
+  }
+
+.qualityLog-card .logNum {
+  color:white;
+  padding-top:18px;
+  padding-right:18px;
+  margin-bottom:20px;
+  text-align: right;
+}
+
+.qualityLog-card .logCard {
+  width:100%;
+}
+
+.qualityLog-card .el-card {
+  background:none;
+  border:0px;
+}
+
+.qualityLog-card .nameSpan {
+  color:#249CF9;
+}
+
+.qualityLog-card .recorderSpan {
+  color:white;
+}
+
+.qualityLog-card .logCard:nth-child(2n) {
+  background-color: rgba(64, 158, 255, 0.1);
+}
+
+.qualityLog-card .logCard:nth-child(2n+1) {
+
+}

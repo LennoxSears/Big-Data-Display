@@ -1,0 +1,22 @@
+
+.processContent p{
+	margin: 0;
+	height: 70px;
+	line-height: 70px;
+	background: #02173A;
+	font-size: 24px;
+	color: #FAFAFB;
+	padding-left: 6%;
+	font-weight: 500;
+}
+.processContent .main{
+	width: 100%;
+}
+.processContent h5{
+	display: block;
+	color: #F5F5F6;
+	text-align: center;
+	font-weight: 500;
+	font-size: 23px;
+}
+

@@ -1,0 +1,59 @@
+.milestone-card i{
+  font-style: normal;
+}
+.milestone-card p{
+  margin: 0;
+  padding: 0;
+}
+.milestone-card h2{
+  margin: 0;
+  padding:16px 16px 0 16px;
+  font-weight: normal;
+  color: #fff;
+}
+.milestone-ctn{
+  color: #fff;
+  margin: 0 30px;
+}
+.milestone-ctn .i_text{
+  padding-right:8px; 
+  font-size: 28px;
+  color: #6CB3DB;
+}
+.milestone-ctn .step-title{
+  display: flex;
+  justify-content: space-between;
+  margin-top:30px;
+}
+.milestone-ctn .step-img{
+  display: flex;
+  margin: 20px 0;
+  overflow: hidden;
+}
+.milestone-ctn .step-img .line,.milestone-ctn .step-img .line2{
+  position: relative;
+  top:-18px;
+  display: inline-block;
+  height:0;
+  border:none;
+  border-top:2px solid #5A99BF;
+}
+.milestone-ctn .step-img .line{
+  width: 113px;
+}
+.milestone-ctn .step-img .line2{
+  width: 23px;
+}
+.milestone-ctn .step-img .ring{
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border:5px solid #fff;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.milestone-ctn .step-detail{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}

@@ -1,0 +1,91 @@
+.laborInOut-card .logContainer {
+ padding-right: 20px;
+ padding-left: 20px;
+}
+
+.laborInOut-card .logContainer h4 {
+  color:rgba(108, 180, 219, 1);
+  margin-top:40px;
+  margin-bottom: 10px;
+}
+
+.laborInOut-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.laborInOut-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.laborInOut-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.laborInOut-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.laborInOut-card .clearfix:before,
+.laborInOut-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.laborInOut-card .clearfix:after {
+      clear: both
+  }
+
+.laborInOut-card .logNum {
+  color:white;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.laborInOut-card .logNum * {
+  background:none;
+  color:#59BAF2
+}
+
+.laborInOut-card .scrollDiv {
+  height:190px;
+}
+
+.laborInOut-card .logCard {
+  box-sizing: border-box;
+}
+
+.laborInOut-card .el-card {
+  background:none;
+  border:0px;
+}
+
+.laborInOut-card .nameSpan {
+  color:#249CF9;
+}
+
+.laborInOut-card .recorderSpan {
+  color:white;
+}
+
+.laborInOut-card .logCard *{
+  background:none;
+  color:white;
+}
+
+.laborInOut-card .logCard .el-table__header-wrapper {
+  display: none;
+}
+
+.laborInOut-card .logNum .el-table__body-wrapper {
+  display: none;
+}
+
+.laborInOut-card .cell {
+  font-size: 10px;
+  text-align: left;
+}

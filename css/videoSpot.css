@@ -1,0 +1,43 @@
+.videoSpot-card .dropDownDiv {
+  height:30px;
+  color:white;
+  padding-top: 6px;
+  padding-left: 30px;
+  border:0px red solid;
+  width:180px;
+  position: absolute;
+  z-index: 200;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.videoSpot-card .el-dropdown-link {
+   cursor: pointer;
+   color: white;
+ }
+ .videoSpot-card .el-icon-arrow-down {
+   font-size: 12px;
+ }
+
+ .videoSpot-card .dropDownDiv .dropText{
+   margin-right: 20px;
+ }
+
+.videoSpot-card .singleVideo {
+  border: 0px red solid;
+  height:100%;
+}
+
+.videoSpot-card {
+  border:0px blue solid;
+  height:calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-js .vjs-control-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}

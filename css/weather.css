@@ -1,0 +1,48 @@
+.weatherContent h3{
+	font-size: 20px;
+	color: #FAFAFB;
+	padding-left: 6%;
+	font-weight: 500;
+}
+.weatherContent h3 .city{
+	display: inline-block;
+	margin-left: 35%;
+}
+.mainTop{
+	height:90px;
+	padding: 0 15%;
+	overflow: hidden;
+}
+.mainTop div{
+	padding-left: 5%;
+	font-size: 14px;
+	color: #6AB0D7;
+	width: 45%;
+	float: left;
+}
+.mainTop div p{
+	line-height: 8px;
+}
+.mainTop div p span{
+	display: inline-block;
+	margin-left: 10px;
+}
+.mainTop .font36{
+	font-size: 36px;
+}
+
+.mainTop .font28{
+	font-size: 28px;
+}
+
+.mainBottom ul{
+	height: 120px;
+	padding:0 4%;
+}
+.mainBottom ul li{
+	list-style: none;
+	font-size: 12px;
+	color: #F2F3F5;
+	float: left;
+	width: 14.2%;
+}

@@ -1,0 +1,142 @@
+.yellowHatAlertWrapper {
+  text-align: center;
+  width:240px;
+  height:80px;
+  border:0px solid red;
+  position: relative;
+}
+
+.yellowHatPhoto {
+  width:80px;
+  height:80px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0px;
+}
+
+#yellowHatName {
+  position: absolute;
+  left: 100px;
+  top:16px;
+  color:rgba(102,157,252,1);
+  font-size: 16px;
+}
+
+#yellowHatCorp {
+  position: absolute;
+  left: 100px;
+  top:40px;
+  color:rgba(102,157,252,1);
+  font-size: 12px;
+}
+
+.popup {
+  margin: 120px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  width: 720px;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  z-index: 300;
+}
+
+.addPanelDiv {
+  margin:0 auto;
+  border:red 0px solid;
+  text-align: center;
+}
+
+#panelPop {
+  display: none;
+}
+
+#videoPop {
+  display: none;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.propertyLine {
+  position: relative;
+  box-sizing: border-box;
+  height:40px;
+  border:0px solid blue;
+  padding-top: 8px;
+}
+
+.propertyItem {
+  display:inline;
+  border:0px solid red;
+}
+
+.propertyItem span {
+  font-size: 14px;
+}
+
+.lightBlue {
+  background-color: rgba(109, 179, 219, 0.4);
+}
+
+.darkBlue {
+  background-color: rgba(2, 23, 58, 1);
+}
+
+.lightWhite {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.deviceAlertWrapper {
+  border: 0px solid red;
+}
+
+.deviceAlertHeader {
+  box-sizing: border-box;
+  height:80px;
+  text-align: center;
+  padding-top:16px;
+}
+
+.deviceTitle {
+  margin-bottom: 2px;
+  border: 0px solid white;
+}
+
+.deviceAlertHeader span {
+  font-size: 14px;
+  color:white;
+}

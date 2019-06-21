@@ -1,0 +1,79 @@
+.securityEdu-card .logContainer {
+ height:360px;
+ position: relative;
+ top:40px;
+}
+
+.securityEdu-card .time {
+    font-size: 13px;
+    color: white;
+    float:right;
+  }
+
+.securityEdu-card .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+.securityEdu-card .button {
+    padding: 0;
+    float: right;
+  }
+
+.securityEdu-card .image {
+    width: 100%;
+    display: block;
+  }
+
+.securityEdu-card .clearfix:before,
+.securityEdu-card .clearfix:after {
+      display: table;
+      content: "";
+  }
+
+.securityEdu-card .clearfix:after {
+      clear: both
+  }
+
+.securityEdu-card .logNum {
+  color:white;
+  padding-top:18px;
+  padding-right:18px;
+  margin-bottom:20px;
+  text-align: right;
+}
+
+.securityEdu-card .logCard {
+  width:100%;
+}
+
+.securityEdu-card .el-card {
+  background:none;
+  border:0px;
+}
+
+.securityEdu-card .nameSpan {
+  color:#249CF9;
+}
+
+.securityEdu-card .recorderSpan {
+  color:white;
+}
+
+.securityEdu-card .logCard:nth-child(2n+1) {
+  background-color: rgba(64, 158, 255, 0.1);
+}
+
+.securityEdu-card .logCard:nth-child(2n) {
+
+}
+
+.securityEdu-card .se-btn-div{
+  position: relative;
+  top: 14px;
+  border:0px solid red;
+}
+
+.securityEdu-card .miniBtn {
+  margin: 0 auto;
+}
