@@ -1,5 +1,5 @@
 ## Project title
-BI Display for construction site.
+BI Display
 
 ## Motivation
 Its a project for a construction-oriented IT organization. The goal of this project is to monitor various data of construction site.
